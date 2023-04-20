@@ -1,8 +1,12 @@
 import SummaryCSS from "./Summary.module.css"
+import SideBar from '../components/SideBar'
 
-const Summary = () => {
+const Summary = ({updateStep, activeStep}) => {
   return (
-    <div>Summary</div>
+    <main>
+      <SideBar activeStep={activeStep} />
+      <h1>Summary</h1>
+    </main>
   )
 }
 

@@ -1,8 +1,12 @@
 import SelectPlanCSS from './SelectPlan.module.css'
+import SideBar from '../components/SideBar'
 
-const SelectPlan = () => {
+const SelectPlan = ({updateStep, activeStep}) => {
   return (
-    <div>SelectPlan</div>
+    <main>
+      <SideBar activeStep={activeStep} />
+      <h1>Select Plan</h1>
+    </main>
   )
 }
 
