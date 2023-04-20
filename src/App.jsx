@@ -8,7 +8,7 @@ import Summary from './pages/Summary'
 
 
 function App() {
-  const [activeStep, setActiveStep] = useState(1)
+  const [activeStep, setActiveStep] = useState(2)
 
   return (
     <div className='container'>

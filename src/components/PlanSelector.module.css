@@ -1,0 +1,66 @@
+.container {
+    width: 450px;
+    height: 348px;
+    margin: 56px 100px 196px 100px;
+    position: relative;
+}
+
+.planOptions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.planOption {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 138px;
+    height: 183px;
+    background: #FFFFFF;
+    border: 1px solid #D6D9E6;
+    border-radius: 8px;
+    padding: 20px 16px 16px 16px;
+}
+
+.planOption:hover {
+    cursor: pointer;
+    background: #F8F9FF;
+    border: 1px solid #483EFF;
+}
+
+.optionInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.planOption h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #022959;
+    margin-top: 39px;
+    margin-bottom: 7px;
+}
+
+.planOption span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9699AA;
+}
+
+span.discount {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #022959;
+    margin-top: 6px;
+}
+
+.backButton {
+    margin-top: 68px  !important;
+    position: absolute !important;
+    left: 0 !important;
+   
+}

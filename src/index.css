@@ -20,6 +20,19 @@ body {
     align-items: center;
 }
 
+h1 {
+    color: #022959;
+    border: 0;
+    margin-bottom: 11px;
+    margin-top: 0;
+}
+
+p {
+    color: #9699AA;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
 /* Mobile */
 @media (max-width: 375px) {
     .container {
