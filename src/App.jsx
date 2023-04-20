@@ -8,12 +8,11 @@ import Summary from './pages/Summary'
 
 
 function App() {
-  const [activeStep, setActiveStep] = useState(2)
+  const [activeStep, setActiveStep] = useState(1)
 
   return (
     <div className='container'>
-      <Summary />
-      {/* {activeStep === 1 && 
+      {activeStep === 1 && 
         <PersonalInfo
           updateStep={setActiveStep}
           activeStep={activeStep} />}
@@ -28,7 +27,7 @@ function App() {
       {activeStep === 4 && 
         <Summary
           updateStep={setActiveStep}
-          activeStep={activeStep} />} */}
+          activeStep={activeStep} />}
     </div>
   )
 }
