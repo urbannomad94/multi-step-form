@@ -1,0 +1,7 @@
+.container {
+    width: 274px;
+    height: 568px;
+    margin: 16px;
+    margin-right: 0;
+    background-image: url('../assets/images/bg-sidebar-desktop.svg');
+}
