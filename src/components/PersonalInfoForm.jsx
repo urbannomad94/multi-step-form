@@ -1,21 +1,23 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import StepButton from './StepButton';
 import PersonalInfoCSS from './PersonalInfoForm.module.css'
 
-const PersonalInfoForm = () => {
+const PersonalInfoForm = ({updateStep}) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name, email, phone);
+        console.log(`Name: ${name} Email: ${email} Phone: ${phone}`);
+        updateStep(2)
     }
 
   return (
     <div className={PersonalInfoCSS.container}>
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
-        <form>
+        <form onSubmit={handleSubmit}>
             <div className={PersonalInfoCSS.formElement}>
                 <label htmlFor="name">Name</label>
                     <input
@@ -53,8 +55,9 @@ const PersonalInfoForm = () => {
                     }}
                     required />
             </div>
+            <div className="btnContainer"><StepButton /></div>
+            
         </form>
-        <button>Next Step</button>
     </div>
   )
 }
