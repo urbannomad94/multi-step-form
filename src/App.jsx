@@ -12,7 +12,8 @@ function App() {
 
   return (
     <div className='container'>
-      {activeStep === 1 && 
+      <Summary />
+      {/* {activeStep === 1 && 
         <PersonalInfo
           updateStep={setActiveStep}
           activeStep={activeStep} />}
@@ -27,7 +28,7 @@ function App() {
       {activeStep === 4 && 
         <Summary
           updateStep={setActiveStep}
-          activeStep={activeStep} />}
+          activeStep={activeStep} />} */}
     </div>
   )
 }
