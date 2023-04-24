@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import SideBarCSS from './SideBar.module.css'
-import { StepContext } from '../context/stepContext'
+import { AppContext } from '../AppContext'
 
 const SideBar = () => {
-    const {activeStep} = useContext(StepContext)
+    const {activeStep} = useContext(AppContext)
 
     const activeStyle = {
         backgroundColor: '#BEE2FD',

@@ -1,9 +1,9 @@
 import { useContext, useState } from 'react'
 import ButtonCSS from "./Button.module.css"
-import { StepContext } from '../context/stepContext';
+import { AppContext } from '../AppContext';
 
 const Button = ({type}) => {
-  const {setActiveStep} =  useContext(StepContext)
+  const {setActiveStep} =  useContext(AppContext)
   const [isHover, setIsHover] = useState(false);
 
   if (type === "next") {

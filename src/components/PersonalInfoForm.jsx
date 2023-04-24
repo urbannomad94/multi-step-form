@@ -55,9 +55,7 @@ const PersonalInfoForm = () => {
                     required />
             </div>
             <div className="btnContainer">
-                <Button
-                    type="next"
-                />
+                <Button type="next"/>
             </div>
         </form>
 
