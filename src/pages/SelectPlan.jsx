@@ -6,7 +6,7 @@ const SelectPlan = ({updateStep, activeStep}) => {
   return (
     <main>
       <SideBar activeStep={activeStep} />
-      <PlanSelector />
+      <PlanSelector updateStep={updateStep} />
     </main>
   )
 }

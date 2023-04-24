@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import StepButton from './StepButton';
+import Button from './Button';
 import PersonalInfoCSS from './PersonalInfoForm.module.css'
 
 const PersonalInfoForm = ({updateStep}) => {
@@ -10,7 +10,6 @@ const PersonalInfoForm = ({updateStep}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(`Name: ${name} Email: ${email} Phone: ${phone}`);
-        updateStep(2)
     }
 
   return (
@@ -55,9 +54,14 @@ const PersonalInfoForm = ({updateStep}) => {
                     }}
                     required />
             </div>
-            <div className="btnContainer"><StepButton /></div>
-            
+            <div className="btnContainer">
+                <Button
+                    type="next"
+                    updateStep={updateStep}
+                />
+            </div>
         </form>
+
     </div>
   )
 }

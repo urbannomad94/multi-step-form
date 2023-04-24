@@ -1,7 +1,6 @@
 import SideBarCSS from './SideBar.module.css'
 
 const SideBar = ({activeStep}) => {
-    console.log(activeStep)
 
     const activeStyle = {
         backgroundColor: '#BEE2FD',

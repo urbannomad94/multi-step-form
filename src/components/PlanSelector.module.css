@@ -2,7 +2,6 @@
     width: 450px;
     height: 348px;
     margin: 56px 100px 196px 100px;
-    position: relative;
 }
 
 .planOptions {
@@ -62,5 +61,46 @@ span.discount {
     margin-top: 68px  !important;
     position: absolute !important;
     left: 0 !important;
-   
+}
+
+.planType {
+    width: 450px;
+    height: 48px;
+    background: #F8F9FF;
+    border-radius: 8px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.toggler {
+    width: 38px;
+    height: 20px;
+    background: #022959;
+    border-radius: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.toggler:hover, .planTime:hover {
+    cursor: pointer;
+}
+
+.togglerBall {
+    width: 12px;
+    height: 12px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.planTime {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #9699AA;
 }
