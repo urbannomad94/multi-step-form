@@ -2,7 +2,7 @@ import { useState } from "react"
 import PlanSelectorCSS from "./PlanSelector.module.css"
 import Button from "./Button"
 
-const PlanSelector = ({updateStep}) => {
+const PlanSelector = () => {
   const [planTime, setPlanTime] = useState('yearly')
   const [planTier, setPlanTier] = useState(null)
 
@@ -78,10 +78,8 @@ const PlanSelector = ({updateStep}) => {
         </div>
 
         <Button 
-            updateStep={updateStep}
             type="next"/>
         <Button 
-            updateStep={updateStep}
             type="back" />
     </div>
   )

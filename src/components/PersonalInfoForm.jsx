@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Button from './Button';
 import PersonalInfoCSS from './PersonalInfoForm.module.css'
 
-const PersonalInfoForm = ({updateStep}) => {
+const PersonalInfoForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
@@ -57,7 +57,6 @@ const PersonalInfoForm = ({updateStep}) => {
             <div className="btnContainer">
                 <Button
                     type="next"
-                    updateStep={updateStep}
                 />
             </div>
         </form>

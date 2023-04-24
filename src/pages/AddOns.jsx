@@ -1,11 +1,13 @@
 import AddOnsCSS from "./AddOns.module.css"
 import SideBar from '../components/SideBar'
+import AddOnsSelector from "../components/AddOnsSelector";
 
-const AddOns = ({updateStep, activeStep}) => {
+
+const AddOns = () => {
   return (
     <main>
-      <SideBar activeStep={activeStep} />
-      <h1>Add Ons</h1>
+      <SideBar />
+      <AddOnsSelector />
     </main>
   )
 }

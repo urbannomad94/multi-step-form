@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import ButtonCSS from "./Button.module.css"
+import { StepContext } from '../context/stepContext';
 
-const Button = ({type, updateStep}) => {
+const Button = ({type}) => {
+  const {setActiveStep} =  useContext(StepContext)
   const [isHover, setIsHover] = useState(false);
 
   if (type === "next") {
@@ -9,7 +11,7 @@ const Button = ({type, updateStep}) => {
       <button
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
-        onClick={() => updateStep(prevStep => prevStep + 1)}
+        onClick={() => setActiveStep(prevStep => prevStep + 1)}
         style={{
           color: 'white',
           backgroundColor: '#022959',
@@ -23,7 +25,7 @@ const Button = ({type, updateStep}) => {
       <button
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
-        onClick={() => updateStep(prevStep => prevStep - 1)}
+        onClick={() => setActiveStep(prevStep => prevStep - 1)}
         style={{
           color: '#9699AA',
           backgroundColor: 'transparent',

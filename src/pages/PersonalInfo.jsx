@@ -2,11 +2,12 @@ import PersonalInfoForm from '../components/PersonalInfoForm'
 import SideBar from '../components/SideBar'
 import PersonInfoCSS from './PersonalInfo.module.css'
 
-const PersonalInfo = ({updateStep, activeStep}) => {
+
+const PersonalInfo = () => {
   return (
     <main>
-      <SideBar activeStep={activeStep} />
-      <PersonalInfoForm updateStep={updateStep} />
+      <SideBar />
+      <PersonalInfoForm />
     </main>
   )
 }

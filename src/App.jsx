@@ -1,34 +1,27 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import './App.css'
 import PersonalInfo from './pages/PersonalInfo'
 import SelectPlan from './pages/SelectPlan'
 import AddOns from './pages/AddOns'
 import Summary from './pages/Summary'
-
-
+import { StepContext } from './context/stepContext'
 
 function App() {
   const [activeStep, setActiveStep] = useState(1)
 
   return (
-    <div className='container'>
-      {activeStep === 1 && 
-        <PersonalInfo
-          updateStep={setActiveStep}
-          activeStep={activeStep} />}
-      {activeStep === 2 && 
-        <SelectPlan
-          updateStep={setActiveStep}
-          activeStep={activeStep} />}
-      {activeStep === 3 && 
-        <AddOns
-          updateStep={setActiveStep}
-          activeStep={activeStep} />}
-      {activeStep === 4 && 
-        <Summary
-          updateStep={setActiveStep}
-          activeStep={activeStep} />}
-    </div>
+    <StepContext.Provider value={{activeStep, setActiveStep}}>
+      <div className='container'>
+        {activeStep === 1 && 
+          <PersonalInfo/>}
+        {activeStep === 2 && 
+          <SelectPlan/>}
+        {activeStep === 3 && 
+          <AddOns/>}
+        {activeStep === 4 && 
+          <Summary/>}
+      </div>
+    </StepContext.Provider>
   )
 }
 

@@ -1,8 +1,8 @@
-const Confirmation = ({activeStep}) => {
+const Confirmation = () => {
     return (
       <main>
-        <SideBar activeStep={activeStep} />
-        <PersonalInfoForm updateStep={updateStep} />
+        <SideBar />
+        <PersonalInfoForm />
       </main>
     )
 }
