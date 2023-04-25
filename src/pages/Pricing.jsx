@@ -1,13 +1,20 @@
+import { useState } from 'react'
 import PricingDisplay from '../components/PricingDisplay'
 import SideBar from '../components/SideBar'
+import ThankYou from '../components/ThankYou'
 import PricingCSS from './Pricing.module.css'
 
 
 const Pricing = () => {
+  const [confirmed, setConfirmed] = useState(false);
+  const confirm = (e) => {
+    setConfirmed(true);
+  }
+
   return (
     <main>
       <SideBar />
-      <PricingDisplay />
+      {confirmed ? <ThankYou /> : <PricingDisplay confirm={confirm} />} 
     </main>
   )
 }

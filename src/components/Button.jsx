@@ -2,7 +2,7 @@ import { useContext, useState } from 'react'
 import ButtonCSS from "./Button.module.css"
 import { AppContext } from '../AppContext';
 
-const Button = ({type}) => {
+const Button = ({type, confirm}) => {
   const {setActiveStep} =  useContext(AppContext)
   const [isHover, setIsHover] = useState(false);
 
@@ -33,6 +33,20 @@ const Button = ({type}) => {
         }}
         className={isHover ? ButtonCSS.backHover : ''}
           >Go Back</button>
+    )
+  } else if (type === "confirm") {
+    return (
+      <button
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+        onClick={() => confirm()}
+        style={{
+          color: '#FFFFFF',
+          backgroundColor: '#483EFF',
+          right: '100px'
+        }}
+        className={isHover ? ButtonCSS.confirmHover : ''}
+          >Confirm</button>
     )
   }
 }
