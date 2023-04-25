@@ -9,7 +9,7 @@ import { AppContext } from './AppContext'
 
 function App() {
   const [activeStep, setActiveStep] = useState(1)
-  const [planTime, setPlanTime] = useState('yearly')
+  const [planTime, setPlanTime] = useState('monthly')
   const [planTier, setPlanTier] = useState(null)
   const [addOns,  setAddOns] = useState([])
 
