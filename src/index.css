@@ -51,6 +51,18 @@ button:hover {
     cursor: pointer;
 }
 
+.error {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    color: #EE374A;
+}
+
+.hidden {
+    display: none;
+}
+
 /* Mobile */
 @media (max-width: 375px) {
     .container {

@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import PlanSelectorCSS from "./PlanSelector.module.css"
 import Button from "./Button"
 import { AppContext } from "../AppContext"
@@ -8,6 +8,8 @@ import Pro from "../assets/svg-components/Pro"
 
 const PlanSelector = () => {
     const {planTime, setPlanTime, planTier, setPlanTier} = useContext(AppContext)
+
+    let disabled = !planTier
 
   const activeStyle = {
     background: '#F8F9FF',
@@ -19,6 +21,7 @@ const PlanSelector = () => {
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
         <div className={PlanSelectorCSS.planOptions}>
+            <span className={disabled ? PlanSelectorCSS.error : 'hidden'}>Please select a plan</span>
             <div
                 className={PlanSelectorCSS.planOption}
                 style={planTier === 'arcade' ? activeStyle : {}}
@@ -80,7 +83,7 @@ const PlanSelector = () => {
                 onClick={() => setPlanTime('yearly')}>Yearly</span>
         </div>
 
-        <Button type="next"/>
+        <Button disabled={disabled} type="next"/>
         <Button type="back" />
     </div>
   )

@@ -2,15 +2,16 @@ import { useContext, useState } from 'react'
 import ButtonCSS from "./Button.module.css"
 import { AppContext } from '../AppContext';
 
-const Button = ({type, confirm}) => {
+const Button = ({type, confirm, disabled}) => {
   const {setActiveStep} =  useContext(AppContext)
-  const [isHover, setIsHover] = useState(false);
+  const [isHover, setIsHover] = useState(false)
 
   if (type === "next") {
     return (
       <button
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
+        disabled={disabled}
         onClick={() => setActiveStep(prevStep => prevStep + 1)}
         style={{
           color: 'white',
