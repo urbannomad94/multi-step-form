@@ -4,7 +4,6 @@ import PersonalInfo from './pages/PersonalInfo'
 import SelectPlan from './pages/SelectPlan'
 import AddOns from './pages/AddOns'
 import Pricing from './pages/Pricing'
-import Summary from './pages/Summary'
 import { AppContext } from './AppContext'
 
 function App() {

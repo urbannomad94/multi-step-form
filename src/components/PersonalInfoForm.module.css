@@ -35,3 +35,39 @@ input:hover {
     display: flex;
     justify-content: space-between;
 }
+
+@media (max-width: 375px) {
+    .container {
+        width: 343px;
+        height: 376px;
+        margin: 0;
+        position: absolute;
+        top: 99px;
+        background: #FFFFFF;
+        box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
+        border-radius: 10px;
+        padding: 32px 24px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input {
+        border-radius: 4px;
+        font-size: 15px;
+        line-height: 17px;
+        height: 40px
+    }
+
+    .formElement {
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .formElement {
+        gap: 3px;
+        margin-bottom: 16px;
+    }
+    
+}
