@@ -66,8 +66,10 @@ const AddOnsSelector = () => {
             </span>
           </div>
         </div>
-        <Button type="next"/>
-        <Button type="back"/>
+        <div className="btnContainer">
+          <Button type="next"/>
+          <Button type="back"/>
+        </div>
     </div>
     
   )

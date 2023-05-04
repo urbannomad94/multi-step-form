@@ -81,8 +81,10 @@ const PricingDisplay = ({confirm}) => {
         <p>Total (per {time === "Monthly" ? "month" : "year"})</p>
         <span>+${totalPrice}/{time === "Monthly" ? "mo" : "yr"}</span>
       </div>
-      <Button type="confirm" confirm={confirm} />
-      <Button type="back" />
+      <div className="btnContainer">
+        <Button type="confirm" confirm={confirm} />
+        <Button type="back" />
+      </div>
     </div>
   )
 }

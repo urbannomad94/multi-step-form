@@ -27,42 +27,51 @@ const PlanSelector = () => {
                 style={planTier === 'arcade' ? activeStyle : {}}
                 onClick={() => setPlanTier('arcade')}>
                 <Arcade />
+                <div className="planInfo">
                 <h3>Arcade</h3>
-                {planTime === "monthly" ? 
-                    <span>$9/month</span> : (
-                    <>
-                        <span>$90/year</span>
-                        <span className={PlanSelectorCSS.discount}>2 months free</span>
-                    </>
-                )}
+                    {planTime === "monthly" ? 
+                        <span>$9/month</span> : (
+                        <>
+                            <span>$90/year</span>
+                            <br></br>
+                            <span className={PlanSelectorCSS.discount}>2 months free</span>
+                        </>
+                    )}
+                </div> 
             </div>
             <div
                 className={PlanSelectorCSS.planOption}
                 style={planTier === 'advanced' ? activeStyle : {}}
                 onClick={() => setPlanTier('advanced')}>
                 <Advanced />
-                <h3>Advanced</h3>
-                {planTime === "monthly" ? 
-                    <span>$12/month</span> : (
-                    <>
-                        <span>$120/year</span>
-                        <span className={PlanSelectorCSS.discount}>2 months free</span>
-                    </>
-                )}
+                <div className="planInfo">
+                    <h3>Advanced</h3>
+                    {planTime === "monthly" ? 
+                        <span>$12/month</span> : (
+                        <>
+                            <span>$120/year</span>
+                            <br></br>
+                            <span className={PlanSelectorCSS.discount}>2 months free</span>
+                        </>
+                    )}
+                </div>
             </div>
             <div
                 className={PlanSelectorCSS.planOption}
                 style={planTier === 'pro' ? activeStyle : {}}
                 onClick={() => setPlanTier('pro')}>
                 <Pro />
-                <h3>Pro</h3>
-                {planTime === "monthly" ? 
-                    <span>$15/month</span> : (
-                    <>
-                        <span>$150/year</span>
-                        <span className={PlanSelectorCSS.discount}>2 months free</span>
-                    </>
-                )}
+                <div className="planInfo">
+                    <h3>Pro</h3>
+                    {planTime === "monthly" ? 
+                        <span>$15/month</span> : (
+                        <>
+                            <span>$150/year</span>
+                            <br></br>
+                            <span className={PlanSelectorCSS.discount}>2 months free</span>
+                        </>
+                    )}
+                </div>
             </div>
         </div>
         <div className={PlanSelectorCSS.planType}>
@@ -83,8 +92,10 @@ const PlanSelector = () => {
                 onClick={() => setPlanTime('yearly')}>Yearly</span>
         </div>
 
-        <Button disabled={disabled} type="next"/>
-        <Button type="back" />
+        <div className="btnContainer">
+            <Button type="back" />
+            <Button disabled={disabled} type="next"/>
+        </div>
     </div>
   )
 }

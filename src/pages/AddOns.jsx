@@ -1,7 +1,5 @@
-import AddOnsCSS from "./AddOns.module.css"
 import SideBar from '../components/SideBar'
 import AddOnsSelector from "../components/AddOnsSelector";
-
 
 const AddOns = () => {
   return (

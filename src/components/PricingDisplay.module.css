@@ -89,3 +89,50 @@ hr {
     opacity: 0.2;
     margin-top: 8px;
 }
+
+/* Mobile */
+@media (max-width: 375px) {
+    .container {
+        width: 343px;
+        height: 365px;
+        margin: 0;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 99px;
+        margin: 0;
+        padding: 32px 24px;
+        box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
+        border-radius: 10px;
+    }
+
+    .summary {
+        gap: 12px;
+        width: 295px;
+        min-height: 148px;
+        overflow: hidden;
+        background: #F8F9FF;
+        border-radius: 8px;
+        padding: 16px 24px 24px 24px;
+    }
+
+    .total {
+        width: 263px;
+        height: 20px;
+    }
+
+    .total span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .total p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .price {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
