@@ -94,7 +94,7 @@ hr {
 @media (max-width: 375px) {
     .container {
         width: 343px;
-        height: 365px;
+        height: auto;
         margin: 0;
         background-color: #FFFFFF;
         position: absolute;
@@ -108,8 +108,9 @@ hr {
     .summary {
         gap: 12px;
         width: 295px;
-        min-height: 148px;
-        overflow: hidden;
+        /* min-height: 148px; */
+        height: auto;
+        /* overflow: hidden; */
         background: #F8F9FF;
         border-radius: 8px;
         padding: 16px 24px 24px 24px;

@@ -16,9 +16,9 @@ const Button = ({type, confirm, disabled}) => {
         style={{
           color: 'white',
           backgroundColor: '#022959',
-          right: '100px'
+          right: '100px',
         }}
-        className={isHover ? ButtonCSS.nextHover : ''}
+        className={isHover ? ButtonCSS.nextHover + ButtonCSS.nextBtn : ButtonCSS.nextBtn}
           >Next Step</button>
     )
   } else if (type === "back") {
@@ -32,7 +32,7 @@ const Button = ({type, confirm, disabled}) => {
           backgroundColor: 'transparent',
           left: '390px'
         }}
-        className={isHover ? ButtonCSS.backHover : ''}
+        className={isHover ? ButtonCSS.backHover + ButtonCSS.backBtn : ButtonCSS.backBtn}
           >Go Back</button>
     )
   } else if (type === "confirm") {
@@ -46,7 +46,7 @@ const Button = ({type, confirm, disabled}) => {
           backgroundColor: '#483EFF',
           right: '100px'
         }}
-        className={isHover ? ButtonCSS.confirmHover : ''}
+        className={isHover ? ButtonCSS.nextHover + ButtonCSS.nextBtn : ButtonCSS.nextBtn}
           >Confirm</button>
     )
   }

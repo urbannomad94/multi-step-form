@@ -10,3 +10,15 @@
 .confirmHover {
     background-color: #928CFF !important;
 }
+
+@media (max-width: 375px) {
+    .nextBtn {
+        right: 16px !important;
+        top: 16px !important;
+    }
+
+    .backBtn {
+        left: 16px !important;
+        bottom: 16px !important;
+    }
+}
