@@ -134,6 +134,7 @@ span.discount {
         gap: 14px;
         width: 295px;
         height: 77px;
+        /* max-height: 85px; */
     }
 
     .optionInfo {

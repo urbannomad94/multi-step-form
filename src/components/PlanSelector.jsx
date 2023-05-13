@@ -13,7 +13,7 @@ const PlanSelector = () => {
 
   const activeStyle = {
     background: '#F8F9FF',
-    border: '1px solid #483EFF'
+    border: '1px solid #483EFF',
   }
 
   return (

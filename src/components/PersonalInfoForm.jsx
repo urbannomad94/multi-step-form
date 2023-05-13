@@ -6,7 +6,6 @@ const PersonalInfoForm = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const [clicked, setClicked] = useState(false);
 
     const disabled = name.length > 0 && email.length > 0  && phone.length > 0 ? false : true;
     

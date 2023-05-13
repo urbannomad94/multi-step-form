@@ -64,11 +64,16 @@ button:hover {
 }
 
 .error {
+    /* display: none; */
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-align: right;
     color: #EE374A;
+}
+
+input:invalid ~ span {
+    display: block;
 }
 
 .hidden {
@@ -77,6 +82,10 @@ button:hover {
 
 /* Mobile */
 @media (max-width: 375px) {
+    body {
+        width: 375px;
+    }
+    
     main {
         background-color: #EFF5FF;
         display: flex;
@@ -84,7 +93,7 @@ button:hover {
         justify-content: center;
         align-items: center;
         height: 695px;
-        width: 100%;
+        width: 375px;
     }
 
     .container {
