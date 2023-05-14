@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import PersonalInfo from './pages/PersonalInfo'
 import SelectPlan from './pages/SelectPlan'
 import AddOns from './pages/AddOns'
